@@ -1,106 +1,96 @@
-# Design Guidelines for AIToolsSuite Pro - White-Label AI SaaS Platform
+# Design Guidelines for AI Wealth Generation Platform - Premium Luxury SaaS
 
 ## Design Approach
-**Selected Approach**: Reference-Based Design inspired by modern enterprise SaaS platforms like Notion, Linear, and Stripe, combined with AI-focused platforms like OpenAI and Anthropic. This approach balances professional enterprise aesthetics with the innovation and accessibility expected in AI tools.
+**Selected Approach**: Reference-Based Design inspired by luxury fintech platforms like Stripe Atlas, premium crypto exchanges like Coinbase Pro, and exclusive investment platforms. This approach combines ultra-premium aesthetics with the trust and sophistication expected by high-net-worth entrepreneurs.
 
 ## Core Design Elements
 
 ### Color Palette
 **Primary Colors (Dark Mode Default)**:
-- Background: 16 20% 8% (Deep charcoal)
-- Surface: 16 15% 12% (Elevated dark surface)
-- Primary Brand: 210 100% 60% (Vibrant blue for AI/tech feel)
-- Text Primary: 0 0% 95% (Near white)
-- Text Secondary: 0 0% 70% (Muted white)
+- Background: 0 0% 2% (Ultra deep black)
+- Surface: 220 15% 8% (Rich dark surface)
+- Primary Brand: 210 100% 60% (Electric blue for AI/tech innovation)
+- Luxury Accent: 45 100% 70% (Premium gold)
+- Platinum: 210 10% 85% (Sophisticated platinum)
+- Text Primary: 0 0% 98% (Crisp white)
+- Text Secondary: 210 15% 75% (Cool muted white)
 
-**Light Mode**:
-- Background: 0 0% 98% (Clean white)
-- Surface: 0 0% 100% (Pure white)
-- Primary Brand: 210 100% 50% (Deeper blue)
-- Text Primary: 0 0% 10% (Near black)
+**Gradient Treatments**:
+- Hero Background: Electric blue to deep purple (210 100% 60% to 250 80% 45%)
+- CTA Buttons: Gold to amber (45 100% 70% to 35 100% 60%)
+- Success Indicators: Electric blue to cyan (210 100% 60% to 180 100% 65%)
 
 **Accent Colors**:
-- Success: 120 60% 50% (AI success green)
-- Warning: 35 85% 55% (Attention orange)
-- Error: 0 70% 55% (Clear red)
+- Success: 120 60% 50% (Wealth green)
+- Revenue Highlight: 45 100% 70% (Gold emphasis)
+- Luxury Border: 45 50% 60% (Subtle gold outline)
 
 ### Typography
-**Font Stack**: Inter from Google Fonts for its excellent readability and modern tech aesthetic
-- **Headings**: Inter Bold (24px-48px for hero, 18px-32px for sections)
-- **Body**: Inter Regular (14px-16px)
-- **UI Elements**: Inter Medium (12px-14px)
-- **Code/API**: JetBrains Mono for technical content
+**Font Stack**: Inter from Google Fonts for premium tech aesthetic
+- **Headlines**: Inter Black (32px-72px) for hero impact
+- **Financial Numbers**: Inter Bold (24px-48px) with tabular spacing
+- **Body Premium**: Inter Medium (16px-18px)
+- **UI Elements**: Inter Regular (14px-16px)
+- **Technical/API**: JetBrains Mono for code examples
 
 ### Layout System
-**Spacing**: Use Tailwind units of 2, 4, 6, 8, 12, 16 for consistent rhythm
-- **Container**: Max-width of 1280px with responsive breakpoints
-- **Grid**: 12-column responsive grid system
-- **Sections**: Generous vertical spacing (py-16 to py-24)
+**Spacing**: Tailwind units of 4, 8, 12, 16, 24, 32 for luxury breathing room
+- **Container**: Max-width 1400px for premium real estate
+- **Hero**: Full viewport height with centered content
+- **Sections**: Generous spacing (py-20 to py-32)
 
 ### Component Library
 
 **Navigation**:
-- Clean horizontal navbar with subtle glass morphism effect
-- Prominent CTA button for "Get Started" or "Request Demo"
-- Mobile-first hamburger menu with smooth animations
+- Floating glass navbar with subtle gold border
+- Premium logo treatment with subtle glow
+- "Get Exclusive Access" CTA with gold gradient
 
 **Hero Section**:
-- Large, impactful headline emphasizing "White-Label AI Platform"
-- Subheading focusing on rapid deployment and customization
-- Dual CTAs: "Start Free Trial" (primary) and "View Demo" (outline)
-- Large hero image showing dashboard preview or AI workflow visualization
+- Full-screen impact with animated gradient background
+- Massive headline: "Generate $10K-$100K+ Monthly with AI Automation"
+- Revenue calculator widget with real-time animations
+- Dual CTAs: "Start Wealth Generation" (gold) and "View $100K Case Study" (outline with blur)
 
-**Dashboard Previews**:
-- Clean card-based layouts showcasing different AI tools
-- Subtle shadows and hover effects
-- Color-coded categories for different AI capabilities
+**Revenue Showcases**:
+- Animated counter cards showing $10K, $50K, $100K+ milestones
+- Real-time dashboard previews with live metrics
+- Gold-accented progress bars and growth charts
 
-**Forms**:
-- Minimal border design with focus states
-- Inline validation with helpful microcopy
-- Multi-step forms with clear progress indicators
+**Testimonial Cards**:
+- Dark cards with gold borders
+- Revenue achievement highlights
+- Profile photos with subtle platinum frames
 
-**Pricing Tables**:
-- Three-tier structure with middle tier highlighted
-- Clear feature comparison with checkmarks
-- Enterprise "Contact Sales" option
+## Page Structure (4 sections maximum)
 
-## Page-Specific Guidelines
-
-### Landing Page Structure (5 sections max):
-1. **Hero**: Bold value proposition with dashboard preview
-2. **Features**: Grid of AI capabilities with icons
-3. **White-Label Benefits**: Customization showcase
-4. **Social Proof**: Customer logos and testimonials
-5. **CTA Section**: Final conversion push with pricing preview
-
-### Admin Dashboard:
-- Sidebar navigation with collapsible sections
-- Data visualization using subtle gradients
-- Real-time status indicators
-- Clean table designs for user/tool management
-
-### AI Tool Interfaces:
-- Chat-style interfaces with message bubbles
-- Loading states with pulsing animations
-- Result cards with copy-to-clipboard functionality
-- Input areas with placeholder examples
+### Landing Page:
+1. **Hero**: Full-screen wealth generation promise with animated revenue calculator
+2. **Proof Section**: Success stories with specific revenue numbers and AI automation showcases
+3. **Exclusive Platform Preview**: Dashboard screenshots showing AI tools generating passive income
+4. **Investment CTA**: Premium pricing with "Apply for Access" exclusivity messaging
 
 ## Visual Treatments
 
-**Gradients**: Subtle blue-to-purple gradients (210 100% 60% to 250 80% 65%) for hero backgrounds and CTA buttons
+**Premium Effects**:
+- Subtle particle animations in hero background
+- Hover glow effects on revenue cards
+- Smooth number counting animations
+- Glass morphism on navigation and modals
 
-**Glassmorphism**: Subtle blur effects on navigation and modal overlays
-
-**Animations**: Minimal and purposeful - fade-in on scroll, hover states on interactive elements, loading spinners for AI processing
+**Luxury Indicators**:
+- Gold accent lines and borders
+- Platinum text highlighting for key metrics
+- Electric blue glows on interactive elements
+- Deep shadow treatments for card depth
 
 ## Images
-**Hero Image**: Large dashboard screenshot or abstract AI visualization showing multiple tools in action. Should occupy 40-50% of hero section width.
+**Large Hero Image**: Sophisticated dashboard screenshot showing multiple AI wealth generation tools with live revenue streams, profit charts, and automation workflows. Should occupy 50% of hero section, positioned right side with subtle glow effect.
 
-**Feature Icons**: Use Heroicons for consistency - brain, cog, users, chart-bar, etc.
+**Revenue Dashboard Previews**: High-quality mockups showing real-time earnings, passive income streams, and AI automation interfaces with prominent dollar figures.
 
-**Customer Logos**: Grayscale treatment in light mode, slightly brightened in dark mode
+**Success Story Images**: Professional entrepreneur headshots with revenue achievement overlays and luxury treatment.
 
-**Dashboard Previews**: High-quality screenshots of actual interface mockups showing AI tools in action
+**Logo**: Premium wordmark with subtle electric blue accent and possible gold highlight element.
 
-This design system emphasizes trust, innovation, and enterprise-grade quality while maintaining the approachability needed for a wide range of potential white-label customers.
+This design system emphasizes exclusivity, financial success, and cutting-edge AI technology while maintaining the trust and sophistication required for high-investment entrepreneurial platforms.
