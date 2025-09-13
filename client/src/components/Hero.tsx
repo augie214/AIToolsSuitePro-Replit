@@ -3,6 +3,7 @@ import { ArrowRight, Play, CheckCircle, DollarSign, TrendingUp, Crown, Zap, User
 import { useState, useEffect } from 'react';
 import heroBackground from '@assets/generated_images/Luxury_AI_entrepreneurs_workspace_15c53741.png';
 import wealthDashboard from '@assets/generated_images/Premium_AI_wealth_dashboard_c37d0810.png';
+import { ROICalculator, SuccessIndicatorGrid, LiveRevenueMeter, AnimatedSuccessBadge } from '@/components/wealth';
 
 // Animated Revenue Counter Component
 function RevenueCounter({ target, label, symbol = '$', duration = 2000 }: { target: number; label: string; symbol?: string; duration?: number }) {
@@ -66,6 +67,37 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        {/* Success Indicators Header */}
+        <div className="text-center mb-16">
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
+            <AnimatedSuccessBadge
+              icon={DollarSign}
+              value={500}
+              label="Million Generated"
+              suffix="M+"
+              prefix="$"
+              size="lg"
+              delay={0}
+            />
+            <AnimatedSuccessBadge
+              icon={Users}
+              value={10000}
+              label="Millionaires Created"
+              suffix="+"
+              size="lg"
+              delay={300}
+            />
+            <AnimatedSuccessBadge
+              icon={Award}
+              value={96}
+              label="Success Rate"
+              suffix="%"
+              size="lg"
+              delay={600}
+            />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
           {/* Left column - Premium Content */}
           <div className="space-y-10">
@@ -182,6 +214,30 @@ export default function Hero() {
               <div className="absolute top-1/2 -right-4 bg-primary text-primary-foreground px-3 py-2 rounded-lg text-xs font-bold shadow-lg transform -rotate-12" data-testid="indicator-tools">
                 AI Autopilot ON
               </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Interactive Revenue Simulation Section */}
+        <div className="mt-24 pt-24 border-t border-electric-blue/20">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-5xl font-black text-gradient-electric mb-4">
+              Calculate Your <span className="text-gradient-gold">Revenue Potential</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              See exactly how much revenue you can generate with our exclusive AI wealth systems
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* ROI Calculator */}
+            <div className="lg:col-span-2">
+              <ROICalculator className="h-full" />
+            </div>
+            
+            {/* Live Revenue Meter */}
+            <div className="space-y-6">
+              <LiveRevenueMeter className="h-full" />
             </div>
           </div>
         </div>
