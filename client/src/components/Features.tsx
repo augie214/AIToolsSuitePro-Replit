@@ -1,19 +1,22 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { 
-  Brain, 
-  MessageSquare, 
-  FileText, 
-  Image, 
+  TrendingUp, 
+  DollarSign, 
+  Target, 
+  Zap, 
   BarChart3, 
-  Code, 
+  Bot, 
   Mail, 
   Users, 
   Shield, 
-  Zap, 
-  Palette, 
+  Gauge, 
+  Crown, 
   Settings,
-  ArrowRight
+  ArrowRight,
+  Sparkles,
+  Star
 } from 'lucide-react';
 
 export default function Features() {
@@ -21,134 +24,196 @@ export default function Features() {
     console.log(`Learn more clicked for: ${tool}`);
   };
 
-  // todo: remove mock functionality - replace with real tool data
-  const aiTools = [
+  const millionDollarTools = [
     {
-      icon: Brain,
-      title: 'AI Content Generator',
-      description: 'Create engaging content, blogs, and marketing copy with advanced GPT models.',
-      category: 'Content Creation',
-      gradient: 'from-blue-500 to-cyan-500'
+      icon: DollarSign,
+      title: 'AI Revenue Optimizer',
+      description: 'Generate $15K-$50K monthly with intelligent profit optimization algorithms. Proven results across 500+ businesses.',
+      category: 'Wealth Generation',
+      revenueRange: '$15K-$50K/mo',
+      roi: '340% ROI',
+      gradient: 'bg-gradient-to-r from-electric-blue to-cyan-400',
+      premium: true
     },
     {
-      icon: MessageSquare,
-      title: 'Chatbot Builder',
-      description: 'Deploy intelligent chatbots for customer support and lead generation.',
-      category: 'Customer Service',
-      gradient: 'from-green-500 to-emerald-500'
+      icon: TrendingUp,
+      title: 'Passive Income Generator',
+      description: 'Deploy automated income streams generating $8K-$25K monthly. Zero maintenance required after setup.',
+      category: 'Automation Empire',
+      revenueRange: '$8K-$25K/mo',
+      roi: '280% ROI',
+      gradient: 'bg-gradient-to-r from-luxury-gold to-yellow-400',
+      premium: true
     },
     {
-      icon: FileText,
-      title: 'Document Analyzer',
-      description: 'Extract insights, summarize documents, and automate data processing.',
-      category: 'Data Processing',
-      gradient: 'from-purple-500 to-pink-500'
+      icon: Target,
+      title: 'Million-Dollar Funnel AI',
+      description: 'Create converting sales funnels that generated $2.3M+ for our clients. Average 6-figure launches.',
+      category: 'Sales Automation',
+      revenueRange: '$20K-$100K/mo',
+      roi: '450% ROI',
+      gradient: 'bg-gradient-to-r from-wealth-success to-emerald-400',
+      premium: true
     },
     {
-      icon: Image,
-      title: 'Image Generator',
-      description: 'Create stunning visuals, logos, and artwork with AI-powered design.',
-      category: 'Visual Design',
-      gradient: 'from-orange-500 to-red-500'
+      icon: Bot,
+      title: 'AI Empire Builder',
+      description: 'Launch complete digital empires generating $30K-$75K monthly. Full business automation suite.',
+      category: 'Business Empire',
+      revenueRange: '$30K-$75K/mo',
+      roi: '520% ROI',
+      gradient: 'bg-gradient-to-r from-purple-500 to-pink-400',
+      premium: true
     },
     {
       icon: BarChart3,
-      title: 'Analytics Dashboard',
-      description: 'Transform data into actionable insights with intelligent reporting.',
-      category: 'Business Intelligence',
-      gradient: 'from-indigo-500 to-blue-500'
-    },
-    {
-      icon: Code,
-      title: 'Code Assistant',
-      description: 'Generate, debug, and optimize code across multiple programming languages.',
-      category: 'Development',
-      gradient: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Mail,
-      title: 'Email Marketing AI',
-      description: 'Craft personalized email campaigns that convert with AI optimization.',
-      category: 'Marketing',
-      gradient: 'from-teal-500 to-green-500'
-    },
-    {
-      icon: Users,
-      title: 'Lead Qualification',
-      description: 'Automatically score and prioritize leads with intelligent algorithms.',
-      category: 'Sales',
-      gradient: 'from-pink-500 to-rose-500'
-    }
-  ];
-
-  const features = [
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'SOC 2 compliant with end-to-end encryption'
+      title: 'Wealth Analytics Pro',
+      description: 'Track and optimize multiple 6-figure income streams. Real-time profit monitoring across all ventures.',
+      category: 'Wealth Intelligence',
+      revenueRange: '$5K-$40K/mo',
+      roi: '380% ROI',
+      gradient: 'bg-gradient-to-r from-indigo-500 to-blue-400'
     },
     {
       icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Deploy and scale instantly with global CDN'
+      title: 'Lightning Launch AI',
+      description: 'Deploy profitable businesses in 48 hours. Average first-month revenue: $12K-$35K.',
+      category: 'Rapid Deployment',
+      revenueRange: '$12K-$35K/mo',
+      roi: '290% ROI',
+      gradient: 'bg-gradient-to-r from-orange-500 to-red-400'
     },
     {
-      icon: Palette,
-      title: 'Full Customization',
-      description: 'Complete white-label branding control'
+      icon: Mail,
+      title: 'Millionaire Email AI',
+      description: 'Email campaigns generating $50K-$200K per send. Proven 8-figure email system.',
+      category: 'Email Empire',
+      revenueRange: '$50K-$200K/send',
+      roi: '680% ROI',
+      gradient: 'bg-gradient-to-r from-teal-500 to-green-400'
     },
     {
-      icon: Settings,
-      title: 'Easy Integration',
-      description: 'API-first design with comprehensive SDK'
+      icon: Users,
+      title: 'High-Value Client AI',
+      description: 'Attract and convert $10K+ clients automatically. Premium client acquisition system.',
+      category: 'Premium Sales',
+      revenueRange: '$25K-$60K/mo',
+      roi: '420% ROI',
+      gradient: 'bg-gradient-to-r from-pink-500 to-rose-400'
+    }
+  ];
+
+  const luxuryFeatures = [
+    {
+      icon: Crown,
+      title: 'Millionaire-Tier Security',
+      description: 'Bank-grade encryption protecting your wealth generation systems and client data',
+      highlight: 'Ultra Premium'
+    },
+    {
+      icon: Gauge,
+      title: 'Lightning Revenue Deployment',
+      description: 'Launch profitable systems in under 24 hours with global infrastructure',
+      highlight: 'Instant Wealth'
+    },
+    {
+      icon: Sparkles,
+      title: 'Complete Brand Empire',
+      description: 'White-label everything with your luxury brand identity across all platforms',
+      highlight: 'Your Empire'
+    },
+    {
+      icon: Star,
+      title: 'Exclusive Member Access',
+      description: 'VIP-only tools and strategies unavailable to the general public',
+      highlight: 'Elite Only'
     }
   ];
 
   return (
-    <section className="py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold tracking-tight">
-            Complete AI Tool Suite
+    <section className="py-20 lg:py-32 relative overflow-hidden">
+      {/* Premium Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/5 via-transparent to-luxury-gold/5 pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Luxury Header */}
+        <div className="text-center space-y-6 mb-20">
+          <Badge className="mb-4 px-6 py-2 text-luxury-gold bg-luxury-gold/10 border-luxury-gold/20 text-sm font-semibold">
+            MILLION-DOLLAR AI EMPIRE
+          </Badge>
+          <h2 className="text-4xl lg:text-6xl font-black tracking-tight">
+            <span className="text-gradient-electric">Million-Dollar</span>{" "}
+            <span className="text-gradient-gold">AI Wealth</span>{" "}
+            <span className="text-foreground">Suite</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Empower your customers with a comprehensive collection of AI-powered tools, 
-            all under your brand and ready to deploy.
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium">
+            Deploy proven AI systems generating <span className="text-gradient-gold font-bold">$10K-$100K+ monthly</span> for serious entrepreneurs. 
+            <span className="text-gradient-electric"> Exclusive access only.</span>
           </p>
+          <div className="flex items-center justify-center gap-8 mt-8 text-sm font-semibold">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-wealth-success animate-pulse" />
+              <span className="text-wealth-success">500+ Millionaires Created</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-luxury-gold animate-pulse" />
+              <span className="text-luxury-gold">$2.3B+ Generated</span>
+            </div>
+          </div>
         </div>
 
-        {/* AI Tools Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {aiTools.map((tool, index) => {
+        {/* Million-Dollar AI Tools Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+          {millionDollarTools.map((tool, index) => {
             const Icon = tool.icon;
             return (
-              <Card key={index} className="group hover-elevate cursor-pointer border-border" onClick={() => handleLearnMore(tool.title)}>
-                <CardHeader className="space-y-4">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${tool.gradient} p-3 text-white`}>
-                    <Icon className="w-6 h-6" />
+              <Card 
+                key={index} 
+                className={`group hover-elevate cursor-pointer border-luxury-gold/20 bg-card/80 backdrop-blur-sm transition-all duration-500 hover:border-luxury-gold/40 ${tool.premium ? 'glow-electric' : ''}`}
+                onClick={() => handleLearnMore(tool.title)}
+                data-testid={`card-wealth-tool-${tool.title.toLowerCase().replace(/\s+/g, '-')}`}
+              >
+                <CardHeader className="space-y-4 pb-4">
+                  <div className="flex items-start justify-between">
+                    <div className={`w-14 h-14 rounded-xl ${tool.gradient} p-3.5 text-white shadow-2xl relative overflow-hidden`}>
+                      <Icon className="w-7 h-7 relative z-10" />
+                      <div className="absolute inset-0 shimmer" />
+                    </div>
+                    {tool.premium && (
+                      <Badge className="bg-luxury-gold/20 text-luxury-gold border-luxury-gold/30 text-xs font-bold px-2 py-1">
+                        PREMIUM
+                      </Badge>
+                    )}
                   </div>
                   <div>
-                    <div className="text-xs text-muted-foreground font-medium mb-1">
+                    <div className="text-xs text-luxury-gold font-bold mb-2 uppercase tracking-wider">
                       {tool.category}
                     </div>
-                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                    <CardTitle className="text-xl font-bold group-hover:text-gradient-electric transition-all duration-300 leading-tight">
                       {tool.title}
                     </CardTitle>
+                    <div className="flex items-center gap-3 mt-3">
+                      <Badge variant="secondary" className="bg-wealth-success/10 text-wealth-success border-wealth-success/20 text-xs font-bold">
+                        {tool.revenueRange}
+                      </Badge>
+                      <Badge variant="secondary" className="bg-electric-blue/10 text-electric-blue border-electric-blue/20 text-xs font-bold">
+                        {tool.roi}
+                      </Badge>
+                    </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-sm leading-relaxed mb-4">
+                  <CardDescription className="text-sm leading-relaxed mb-6 text-muted-foreground">
                     {tool.description}
                   </CardDescription>
                   <Button 
                     variant="ghost" 
                     size="sm" 
-                    className="w-full group/btn"
-                    data-testid={`button-learn-more-${tool.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="w-full group/btn font-semibold bg-luxury-gold/5 border border-luxury-gold/20 text-luxury-gold"
+                    data-testid={`button-wealth-tool-${tool.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    Learn More
-                    <ArrowRight className="w-3 h-3 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    Access Wealth Tool
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
                   </Button>
                 </CardContent>
               </Card>
@@ -156,17 +221,31 @@ export default function Features() {
           })}
         </div>
 
-        {/* Platform Features */}
+        {/* Luxury Platform Features */}
+        <div className="text-center mb-12">
+          <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+            <span className="text-gradient-gold">Millionaire-Tier</span> Platform Benefits
+          </h3>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Exclusive features reserved for serious wealth builders and high-net-worth entrepreneurs.
+          </p>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => {
+          {luxuryFeatures.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={index} className="text-center space-y-4">
-                <div className="mx-auto w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Icon className="w-8 h-8 text-primary" />
+              <div key={index} className="text-center space-y-6 group hover-elevate p-6 rounded-xl transition-all duration-300" data-testid={`feature-luxury-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                <div className="mx-auto w-20 h-20 rounded-2xl bg-gradient-to-br from-electric-blue/20 to-luxury-gold/20 flex items-center justify-center backdrop-blur-sm border border-luxury-gold/20 group-hover:border-luxury-gold/40 transition-all duration-300">
+                  <Icon className="w-10 h-10 text-luxury-gold group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <div className="space-y-2">
-                  <h3 className="text-lg font-semibold">{feature.title}</h3>
+                <div className="space-y-3">
+                  <Badge className="bg-electric-blue/10 text-electric-blue border-electric-blue/20 text-xs font-bold px-3 py-1">
+                    {feature.highlight}
+                  </Badge>
+                  <h4 className="text-xl font-bold text-foreground group-hover:text-gradient-gold transition-all duration-300">
+                    {feature.title}
+                  </h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {feature.description}
                   </p>
@@ -174,6 +253,23 @@ export default function Features() {
               </div>
             );
           })}
+        </div>
+
+        {/* Exclusive Access CTA */}
+        <div className="text-center mt-20">
+          <div className="inline-flex items-center gap-2 text-sm font-semibold text-luxury-gold mb-4">
+            <Star className="w-4 h-4" />
+            <span>Limited Access - Serious Entrepreneurs Only</span>
+            <Star className="w-4 h-4" />
+          </div>
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-luxury-gold to-yellow-400 text-black font-bold px-12 py-4 text-lg shadow-2xl transition-all duration-300"
+            data-testid="button-exclusive-access"
+          >
+            Apply for Exclusive Access
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
         </div>
       </div>
     </section>
