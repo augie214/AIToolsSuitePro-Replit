@@ -123,76 +123,103 @@
 }
 
 .dark {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
+  --button-outline: rgba(255,255,255, .15);
+  --badge-outline: rgba(255,255,255, .08);
 
-  --opaque-button-border-intensity: 9;  /* In terms of percentages */
+  --opaque-button-border-intensity: 12;  /* In terms of percentages */
 
   /* Backgrounds applied on top of other backgrounds when hovered/active */
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
+  --elevate-1: rgba(255,255,255, .06);
+  --elevate-2: rgba(255,255,255, .12);
 
-  --background: 20 14% 4%;
+  /* Premium Ultra Deep Black Background */
+  --background: 0 0% 2%;
 
-  --foreground: 45 25% 91%;
+  /* Crisp White Text */
+  --foreground: 0 0% 98%;
 
-  --border: 20 14% 15%;
+  /* Rich Dark Border */
+  --border: 220 15% 12%;
 
-  --card: 20 14% 8%;
+  /* Rich Dark Surface Cards */
+  --card: 220 15% 8%;
 
-  --card-foreground: 45 25% 85%;
+  /* Premium White Card Text */
+  --card-foreground: 0 0% 95%;
 
-  --card-border: 16 12% 20%;
+  /* Subtle Card Borders */
+  --card-border: 220 15% 15%;
 
-  --sidebar: 20 14% 8%;
+  /* Sidebar Matching Card Surface */
+  --sidebar: 220 15% 8%;
 
-  --sidebar-foreground: 45 25% 85%;
+  /* Sidebar Text */
+  --sidebar-foreground: 0 0% 95%;
 
-  --sidebar-border: 20 14% 15%;
+  /* Sidebar Borders */
+  --sidebar-border: 220 15% 12%;
 
-  --sidebar-primary: 9 75% 61%;
+  /* Electric Blue Primary Brand */
+  --sidebar-primary: 210 100% 60%;
 
   --sidebar-primary-foreground: 0 0% 100%;
 
-  --sidebar-accent: 25 45% 20%;
+  /* Sidebar Accent */
+  --sidebar-accent: 220 15% 18%;
 
-  --sidebar-accent-foreground: 45 25% 85%;
+  --sidebar-accent-foreground: 0 0% 90%;
 
-  --sidebar-ring: 9 75% 61%;
+  --sidebar-ring: 210 100% 60%;
 
-  --popover: 20 14% 4%;
+  /* Popover Styling */
+  --popover: 220 15% 8%;
 
-  --popover-foreground: 45 25% 91%;
+  --popover-foreground: 0 0% 95%;
 
-  --popover-border: 16 10% 22%;
+  --popover-border: 220 15% 15%;
 
-  --primary: 9 75% 61%;
+  /* Electric Blue Primary */
+  --primary: 210 100% 60%;
 
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 30 15% 52%;
+  /* Premium Gold Secondary */
+  --secondary: 45 100% 70%;
 
-  --secondary-foreground: 0 0% 100%;
+  --secondary-foreground: 0 0% 0%;
 
-  --muted: 20 14% 15%;
+  /* Muted Backgrounds */
+  --muted: 220 15% 12%;
 
-  --muted-foreground: 45 15% 46%;
+  --muted-foreground: 210 15% 75%;
 
-  --accent: 25 45% 20%;
+  /* Platinum Accent */
+  --accent: 210 10% 25%;
 
-  --accent-foreground: 45 25% 85%;
+  --accent-foreground: 210 10% 85%;
 
   --destructive: 356.3033 90.5579% 54.3137%;
 
   --destructive-foreground: 0 0% 100%;
 
-  --input: 20 14% 18%;
-  --ring: 9 75% 61%;
-  --chart-1: 203.8863 88.2845% 53.1373%;
-  --chart-2: 159.7826 100% 36.0784%;
-  --chart-3: 42.0290 92.8251% 56.2745%;
-  --chart-4: 147.1429 78.5047% 41.9608%;
-  --chart-5: 341.4894 75.2000% 50.9804%;
+  /* Premium Input Styling */
+  --input: 220 15% 18%;
+  --ring: 210 100% 60%;
+  
+  /* Wealth Generation Charts */
+  --chart-1: 210 100% 60%; /* Electric Blue */
+  --chart-2: 45 100% 70%; /* Gold */
+  --chart-3: 120 60% 50%; /* Wealth Green */
+  --chart-4: 180 100% 65%; /* Cyan */
+  --chart-5: 250 80% 65%; /* Purple */
+  
+  /* Custom Premium Variables */
+  --wealth-success: 120 60% 50%;
+  --luxury-gold: 45 100% 70%;
+  --platinum: 210 10% 85%;
+  --electric-blue: 210 100% 60%;
+  --premium-gradient-from: 210 100% 60%;
+  --premium-gradient-to: 250 80% 45%;
 
   --shadow-2xs: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
   --shadow-xs: 0px 1px 3px 0px rgba(0, 0, 0, 0.4), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
@@ -210,8 +237,68 @@
     @apply border-border;
   }
 
+  /* Default to dark mode for premium feel */
+  html {
+    @apply dark;
+  }
+
   body {
     @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Premium Animation Keyframes */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Premium Utility Classes */
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--luxury-gold)), hsl(45 80% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-electric {
+    background: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(180 100% 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-premium {
+    background: linear-gradient(135deg, hsl(var(--premium-gradient-from)), hsl(var(--premium-gradient-to)));
+  }
+  
+  .bg-gradient-wealth {
+    background: linear-gradient(135deg, hsl(var(--wealth-success)), hsl(120 50% 40%));
+  }
+  
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+  
+  .glow-electric {
+    animation: glow 2s ease-in-out infinite;
+  }
+  
+  .animate-count-up {
+    animation: countUp 0.8s ease-out;
   }
 }
 
