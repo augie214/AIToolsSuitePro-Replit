@@ -80,6 +80,14 @@
   --font-serif: 'Poppins', sans-serif;
   --font-mono: Menlo, monospace;
   --radius: 0.8rem; /* 8px */
+
+  /* Premium Wealth Platform Colors - Light Mode */
+  --wealth-success: 120 60% 35%; /* Darker green for better contrast on light backgrounds */
+  --luxury-gold: 45 85% 45%; /* Darker gold for visibility on light backgrounds */  
+  --platinum: 210 10% 40%; /* Darker platinum for light mode readability */
+  --electric-blue: 210 100% 45%; /* Darker blue for better contrast in light mode */
+  --premium-gradient-from: 210 100% 45%;
+  --premium-gradient-to: 250 80% 35%;
   --shadow-2xs: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00);
   --shadow-sm: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00), 0px 1px 2px -1px hsl(9, 75%, 61% / 0.00);
