@@ -81,6 +81,11 @@ export default {
           busy: "rgb(239 68 68)",
           offline: "rgb(156 163 175)",
         },
+        // Premium Wealth Platform Colors
+        "wealth-success": "hsl(var(--wealth-success) / <alpha-value>)",
+        "luxury-gold": "hsl(var(--luxury-gold) / <alpha-value>)",
+        "platinum": "hsl(var(--platinum) / <alpha-value>)",
+        "electric-blue": "hsl(var(--electric-blue) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
